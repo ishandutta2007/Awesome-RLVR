@@ -4,7 +4,11 @@
 
 # Awesome-RLVR 🚀🤖
 
+<a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+
 ## Reinforcement Learning with Verifiable Rewards: Evolution, Variants, & Applications 🎓🧬
+
+> **Keywords:** Reinforcement Learning, Verifiable Rewards, RLVR, RLHF, Process Reward Models, AI Feedback, Code-RL, Formal Verification, Lean 4, LLM Alignment, DeepSeek-R1
 
 Reinforcement Learning with Verifiable Rewards (RLVR) is an advanced post-training alignment and optimization framework that bridges the gap between statistical probability and absolute semantic correctness. In traditional Reinforcement Learning from Human Feedback (RLHF), an AI agent optimizes its policy against a soft, neural Reward Model that mimics human preferences. However, neural reward models are highly susceptible to **reward hacking**—where the agent learns to output superficial politeness or plausible-sounding falsehoods to trick the validator. RLVR eliminates this vulnerability by substituting or augmenting neural reward models with deterministic, objective, and programmatic verifiers (such as sandboxed code compilers, mathematical proof checkers, or symbolic logic engines). By ensuring that rewards are only granted when an output satisfies formal, binary verification criteria, RLVR transforms AI models from speculative token predictors into provably correct reasoning agents.
 
