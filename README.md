@@ -10,7 +10,10 @@ Reinforcement Learning with Verifiable Rewards (RLVR) is an advanced post-traini
 The technical progression of reward verification has transitioned from soft human preference approximations to strict algorithmic boundaries and native test-time search loops.
 
 ```mermaid
-[Neural Preference Rewards (RLHF, 2019)] ----> [Outcome Verification (PRMs / RLAIF, 2023)] ----> [Deterministic Verifiable Feedback (RLVR, 2024-Present)](Vulnerable to Reward Hacking)                 (Granular Step-Level Neural Scoring)                (Compiler & Sandbox-Enforced Hard Truths)
+flowchart LR
+    A["Neural Preference Rewards (RLHF, 2019)<br/>(Vulnerable to Reward Hacking)"]
+    --> B["Outcome Verification (PRMs / RLAIF, 2023)<br/>(Granular Step-Level Neural Scoring)"]
+    --> C["Deterministic Verifiable Feedback (RLVR, 2024-Present)<br/>(Compiler & Sandbox-Enforced Hard Truths)"]
 ```
 
 *   **The Neural Preference Reward Era (Traditional RLHF, ~2019–2023)**
