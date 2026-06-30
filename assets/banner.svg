@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d" />
+      <stop offset="50%" stop-color="#070b19" />
+      <stop offset="100%" stop-color="#02050e" />
+    </linearGradient>
+
+    <!-- Text / Accent Gradients -->
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4f46e5" />
+      <stop offset="50%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <style>
+      .title-text {
+        font-family: 'Outfit', 'Inter', 'Segoe UI', sans-serif;
+        font-weight: 900;
+        font-size: 72px;
+        fill: url(#primaryGrad);
+        letter-spacing: 2px;
+      }
+      .subtitle-text {
+        font-family: 'Inter', 'Segoe UI', sans-serif;
+        font-weight: 500;
+        font-size: 20px;
+        fill: #94a3b8;
+        letter-spacing: 6px;
+      }
+      .tag-text {
+        font-family: 'Inter', 'Segoe UI', sans-serif;
+        font-weight: 700;
+        font-size: 14px;
+        fill: #38bdf8;
+      }
+      
+      /* Pulse Animation for Nodes */
+      @keyframes pulse {
+        0%, 100% {
+          transform: scale(1);
+          opacity: 0.4;
+        }
+        50% {
+          transform: scale(1.15);
+          opacity: 0.9;
+          filter: drop-shadow(0 0 8px #06b6d4);
+        }
+      }
+
+      /* Dash flow animation for connections */
+      @keyframes dashflow {
+        to {
+          stroke-dashoffset: -40;
+        }
+      }
+
+      /* Float animation for title */
+      @keyframes float {
+        0%, 100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-8px);
+        }
+      }
+
+      .node {
+        transform-origin: center;
+        animation: pulse 4s ease-in-out infinite;
+      }
+      .node-delayed {
+        transform-origin: center;
+        animation: pulse 4s ease-in-out infinite;
+        animation-delay: 2s;
+      }
+      .connection {
+        stroke-dasharray: 8, 12;
+        animation: dashflow 2s linear infinite;
+      }
+      .connection-reverse {
+        stroke-dasharray: 8, 12;
+        animation: dashflow 2s linear infinite;
+        animation-direction: reverse;
+      }
+      .floating-title-group {
+        animation: float 6s ease-in-out infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#bgGrad)" />
+
+  <!-- Animated Tech Scaffolding (Grid Pattern & Nodes) -->
+  <g stroke="#1e293b" stroke-width="1" opacity="0.6">
+    <path d="M 0,100 L 1200,100 M 0,200 L 1200,200 M 0,300 L 1200,300" />
+    <path d="M 200,0 L 200,400 M 400,0 L 400,400 M 600,0 L 600,400 M 800,0 L 800,400 M 1000,0 L 1000,400" />
+  </g>
+
+  <!-- Connection Lines (Data Flow) -->
+  <g stroke="url(#primaryGrad)" stroke-width="2" opacity="0.7">
+    <line x1="150" y1="120" x2="300" y2="280" class="connection" />
+    <line x1="300" y1="280" x2="550" y2="150" class="connection-reverse" />
+    <line x1="550" y1="150" x2="880" y2="300" class="connection" />
+    <line x1="880" y1="300" x2="1050" y2="120" class="connection-reverse" />
+    <line x1="150" y1="120" x2="550" y2="150" class="connection" />
+  </g>
+
+  <!-- Verifier Rings / Circles -->
+  <g>
+    <!-- Node 1 -->
+    <circle cx="150" cy="120" r="14" fill="#0f172a" stroke="#8b5cf6" stroke-width="4" class="node" />
+    <circle cx="150" cy="120" r="4" fill="#8b5cf6" />
+    
+    <!-- Node 2 -->
+    <circle cx="300" cy="280" r="18" fill="#0f172a" stroke="#06b6d4" stroke-width="4" class="node-delayed" />
+    <circle cx="300" cy="280" r="6" fill="#06b6d4" />
+
+    <!-- Node 3 (Center Anchor) -->
+    <circle cx="550" cy="150" r="22" fill="#0f172a" stroke="#10b981" stroke-width="5" class="node" />
+    <circle cx="550" cy="150" r="8" fill="#10b981" />
+
+    <!-- Node 4 -->
+    <circle cx="880" cy="300" r="16" fill="#0f172a" stroke="#ec4899" stroke-width="4" class="node-delayed" />
+    <circle cx="880" cy="300" r="5" fill="#ec4899" />
+
+    <!-- Node 5 -->
+    <circle cx="1050" cy="120" r="15" fill="#0f172a" stroke="#f59e0b" stroke-width="4" class="node" />
+    <circle cx="1050" cy="120" r="5" fill="#f59e0b" />
+  </g>
+
+  <!-- Glowing background behind Title -->
+  <circle cx="600" cy="200" r="180" fill="#3b82f6" opacity="0.08" filter="url(#glow)" />
+
+  <!-- Floating Text Content -->
+  <g class="floating-title-group">
+    <!-- Awesome-RLVR Main Title -->
+    <text x="600" y="195" text-anchor="middle" class="title-text" filter="url(#glow)">AWESOME-RLVR</text>
+    
+    <!-- Subtitle -->
+    <text x="600" y="240" text-anchor="middle" class="subtitle-text">REINFORCEMENT LEARNING WITH VERIFIABLE REWARDS</text>
+    
+    <!-- Badge style decorative text -->
+    <rect x="500" y="270" width="200" height="30" rx="15" fill="#1e293b" stroke="#334155" stroke-width="1.5" />
+    <text x="600" y="290" text-anchor="middle" class="tag-text">PROGRAMMATIC VERIFICATION</text>
+  </g>
+
+</svg>

@@ -1,11 +1,16 @@
-# Awesome-RLVR
-## Reinforcement Learning with Verifiable Rewards: Evolution, Variants, & Applications
+<div align="center">
+  <img src="assets/banner.svg" alt="Awesome-RLVR Banner" width="100%">
+</div>
+
+# Awesome-RLVR 🚀🤖
+
+## Reinforcement Learning with Verifiable Rewards: Evolution, Variants, & Applications 🎓🧬
 
 Reinforcement Learning with Verifiable Rewards (RLVR) is an advanced post-training alignment and optimization framework that bridges the gap between statistical probability and absolute semantic correctness. In traditional Reinforcement Learning from Human Feedback (RLHF), an AI agent optimizes its policy against a soft, neural Reward Model that mimics human preferences. However, neural reward models are highly susceptible to **reward hacking**—where the agent learns to output superficial politeness or plausible-sounding falsehoods to trick the validator. RLVR eliminates this vulnerability by substituting or augmenting neural reward models with deterministic, objective, and programmatic verifiers (such as sandboxed code compilers, mathematical proof checkers, or symbolic logic engines). By ensuring that rewards are only granted when an output satisfies formal, binary verification criteria, RLVR transforms AI models from speculative token predictors into provably correct reasoning agents.
 
 ---
 
-## 1. The Chronological Evolution
+## 📅 1. The Chronological Evolution
 
 The technical progression of reward verification has transitioned from soft human preference approximations to strict algorithmic boundaries and native test-time search loops.
 
@@ -24,7 +29,7 @@ flowchart LR
 
 ---
 
-## 2. Core Verifier & Interaction Variants
+## ⚙️ 2. Core Verifier & Interaction Variants
 
 RLVR frameworks are strictly categorized based on the underlying verification engine used to compute the objective, ground-truth reward tensor.
 
@@ -36,7 +41,7 @@ RLVR frameworks are strictly categorized based on the underlying verification en
 
 ---
 
-## 3. Structural Reward Architecture Types
+## 🏗️ 3. Structural Reward Architecture Types
 
 Depending on the complexity of the task and the depth of the optimization loop, verifiable rewards are calculated across distinct structural horizons.
 
@@ -48,7 +53,7 @@ Depending on the complexity of the task and the depth of the optimization loop, 
 
 ---
 
-## 4. Production Engineering Challenges & Hardware Solutions
+## 🛠️ 4. Production Engineering Challenges & Hardware Solutions
 
 Translating hard, programmatic reward verification into large-scale distributed training clusters introduces unique system bottlenecks and gradient anomalies.
 
@@ -59,7 +64,7 @@ Translating hard, programmatic reward verification into large-scale distributed 
 
 ---
 
-## 5. Frontier Real-World AI Safety Applications
+## 🛡️ 5. Frontier Real-World AI Safety Applications
 
 | Application | Description | First Used (Year) | Paper Reference |
 | :--- | :--- | :---: | :--- |
@@ -69,7 +74,7 @@ Translating hard, programmatic reward verification into large-scale distributed 
 
 ---
 
-## References
+## 📚 References
 1. [Schulman, J., et al. (2017). Proximal policy optimization algorithms. *arXiv preprint arXiv:1707.06347*.](https://arxiv.org/abs/1707.06347)
 2. [Cobbe, K., et al. (2021). Training verifiers to solve math word problems. *arXiv preprint arXiv:2110.14168*.](https://arxiv.org/abs/2110.14168)
 3. [Le, H., et al. (2022). CodeRL: Mastering code generation through pretrained models and deep reinforcement learning. *Advances in Neural Information Processing Systems (NeurIPS)*, 35, 21314-21328.](https://arxiv.org/abs/2207.01780)
