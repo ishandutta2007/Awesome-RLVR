@@ -32,17 +32,17 @@ flowchart LR
 
 RLVR frameworks are strictly categorized based on the underlying verification engine used to compute the objective, ground-truth reward tensor.
 
-### A. Code Execution & Compiler Sandboxes (Code-RLVR)
-*   **Mechanism:** The agent is tasked with writing a software script to solve a complex coding issue. The scaffolding passes the generated script directly into an ephemeral, isolated container (e.g., a Docker or gVisor sandbox), executing a comprehensive suite of hidden unit tests.
-*   **Reward Signal:** Binary or programmatic fraction scores based on the absolute number of passed test cases. A script that crashes or fails a single functional check receives zero reward.
+-  ### A. Code Execution & Compiler Sandboxes (Code-RLVR)
+    *   **Mechanism:** The agent is tasked with writing a software script to solve a complex coding issue. The scaffolding passes the generated script directly into an ephemeral, isolated container (e.g., a Docker or gVisor sandbox), executing a comprehensive suite of hidden unit tests.
+    *   **Reward Signal:** Binary or programmatic fraction scores based on the absolute number of passed test cases. A script that crashes or fails a single functional check receives zero reward.
 
-### B. Interactive Theorem Provers (Formal Math RLVR)
-*   **Mechanism:** Operates within high-level dependently typed programming ecosystems. The model translates informal human math conjectures into formal code strings, and an automated verification engine checks the statement step-by-step.
-*   **Target Engines:** **Lean 4**, **Isabelle/HOL**, **Coq**, and **Z3 Theorem Provers**.
-*   **Reward Signal:** Granted exclusively when the ITP compiler validates that the syntax maps out a complete, unbroken mathematical proof loop without structural contradictions.
+-  ### B. Interactive Theorem Provers (Formal Math RLVR)
+    *   **Mechanism:** Operates within high-level dependently typed programming ecosystems. The model translates informal human math conjectures into formal code strings, and an automated verification engine checks the statement step-by-step.
+    *   **Target Engines:** **Lean 4**, **Isabelle/HOL**, **Coq**, and **Z3 Theorem Provers**.
+    *   **Reward Signal:** Granted exclusively when the ITP compiler validates that the syntax maps out a complete, unbroken mathematical proof loop without structural contradictions.
 
-### C. Rule-Based Equivalency Checkers (Deterministic Math RLVR)
-*   **Mechanism:** Used for standard competitive mathematics or symbolic algebra challenges. The model outputs a verbose reasoning chain, extracting its final answer into a strict markdown bracket. The verification layer parses the string, using symbolic algebra engines (like SymPy) to check for absolute mathematical equivalence across representations (e.g., verifying that $\frac{1}{\sqrt{2}}$ matches $\frac{\sqrt{2}}{2}$ perfectly).
+-  ### C. Rule-Based Equivalency Checkers (Deterministic Math RLVR)
+    *   **Mechanism:** Used for standard competitive mathematics or symbolic algebra challenges. The model outputs a verbose reasoning chain, extracting its final answer into a strict markdown bracket. The verification layer parses the string, using symbolic algebra engines (like SymPy) to check for absolute mathematical equivalence across representations (e.g., verifying that $\frac{1}{\sqrt{2}}$ matches $\frac{\sqrt{2}}{2}$ perfectly).
 
 ---
 
