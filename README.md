@@ -97,3 +97,14 @@ To advance your development stack, infrastructure workspace, or documentation re
 
 **Related Topics**: To maximize your strategic overview of automated alignment and cognitive reasoning architectures, explore these related documentation sets:
 
+##  Star History
+<div align="center">
+<a href="https://www.star-history.com/?repos=ishandutta2007%2FAwesome-RLVR&type=date&legend=bottom-right">
+<picture>
+<source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=ishandutta2007/Awesome-RLVR&type=date&theme=dark&legend=bottom-right" />
+<source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=ishandutta2007/Awesome-RLVR&type=date&legend=bottom-right" />
+<img alt="Star History Chart" src="https://api.star-history.com/chart?repos=ishandutta2007/Awesome-RLVR&type=date&legend=bottom-right" />
+</picture>
+</a>
+</div>
+
